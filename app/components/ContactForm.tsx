@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent, ChangeEvent } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 // Email validation regex
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -105,12 +106,14 @@ export default function ContactForm() {
       // Clear form on success
       if (result.status === "success") {
         setFormData({ email: "", phone: "" });
+        toast.success(result?.message || "Form submitted successfully!");
       }
     } catch (error) {
       setSubmitResult({
         status: "error",
         message: "Failed to submit form. Please try again.",
       });
+      toast.error("Failed to submit form. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -118,6 +121,7 @@ export default function ContactForm() {
 
   return (
     <>
+      <Toaster />
       {/* Close button */}
       <button className="absolute top-6 right-6 text-black hover:text-gray-700">
         <svg

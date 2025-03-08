@@ -20,7 +20,7 @@ export default function Process() {
         <div className="space-y-32">
           {/* Step 1 */}
           <div className="flex flex-col sm:flex-row w-full">
-            <div className="w-full sm:w-16 h-16 sm:h-auto rounded-b-3xl sm:rounded-b-none sm:rounded-r-3xl relative border border-[#170D00]">
+            <div className="w-full sm:w-16 h-16 rounded-b-3xl sm:rounded-bl-none sm:h-auto sm:rounded-r-3xl relative border border-[#170D00]">
               <div className="absolute top-15 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl">
                 1
               </div>
@@ -58,7 +58,7 @@ export default function Process() {
           </div>
           {/* Step 2 */}
           <div className={"flex flex-col sm:flex-row"}>
-            <div className="w-full sm:w-16 h-16 sm:h-auto rounded-b-3xl sm:rounded-b-none sm:rounded-r-3xl border border-[#170D00] relative">
+            <div className="w-full sm:w-16 h-16 sm:h-auto rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl border border-[#170D00] relative">
               <div className="absolute top-15 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl">
                 2
               </div>
@@ -208,23 +208,23 @@ export default function Process() {
             </div>
           </div>
           {/* Step 3 */}
-          <div className="text-[#F4EFE7] flex w-full">
-            <div className="w-16 rounded-r-3xl border border-[#FBF6ED] shadow-md relative">
+          <div className="text-[#F4EFE7] flex flex-col sm:flex-row w-full">
+            <div className="w-full sm:w-16 h-16 sm:h-auto rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl border border-[#FBF6ED] shadow-md relative">
               <div className="absolute top-15 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl">
                 3
               </div>
             </div>
             <div className="flex-1 p-10">
-              <h1 className="text-5xl font-medium mb-8">
+              <h1 className="text-5xl font-medium mb-4">
                 Intervene with Confidence
               </h1>
               <div className="flex items-start">
                 <div className="flex-1 mr-12">
-                  <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between items-baseline">
+                  <div className="flex flex-col mb-2 sm:flex-row sm:flex-wrap sm:mb-1 justify-between items-baseline">
                     <h2 className="text-3xl font-normal mb-4 sm:mb-0">
                       Intelligent Interventions
                     </h2>
-                    <div className="mt-8 sm:mt-0">
+                    <div className="mb-1 sm:mt-4">
                       <Link
                         href="/providers/register"
                         className="bg-[#f8f3e3] text-black px-6 py-3 rounded-full font-medium shadow-[0_0_15px_rgba(248,243,227,0.5)] hover:shadow-[0_0_20px_rgba(248,243,227,0.7)] transition-all"
